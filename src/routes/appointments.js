@@ -33,7 +33,6 @@ module.exports = (db, updateAppointment) => {
     }
 
     const { student, interviewer } = request.body.interview;
-
     db.query(
       `
       INSERT INTO interviews (student, interviewer_id, appointment_id) VALUES ($1::text, $2::integer, $3::integer)
